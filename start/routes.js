@@ -15,4 +15,5 @@
 
 const Route = use('Route')
 
+Route.get('api/names', 'NameController.show')
 Route.any('*', 'NuxtController.render')

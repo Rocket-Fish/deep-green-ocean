@@ -21,6 +21,13 @@ module.exports = {
   },
 
   /*
+  ** API URL 
+  */
+  env: {
+      apiUrl: process.env.API_URL,
+    },
+
+  /*
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },

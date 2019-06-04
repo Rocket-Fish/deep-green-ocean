@@ -19,16 +19,27 @@
           >GitHub</a
         >
       </div>
+      <div v-for="(name, index) in names" :key="name.id + '_' + index">
+        <p>{{ name.name }}</p>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import axios from 'axios'
 
 export default {
   components: {
     Logo
+  },
+  async asyncData({ req }) {
+    const baseURL = process.env.apiUrl
+    const { data } = await axios.get(baseURL + '/names')
+    return {
+      names: data
+    }
   }
 }
 </script>

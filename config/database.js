@@ -3,7 +3,7 @@
 const Env = use('Env')
 const Helpers = use('Helpers')
 
-module.exports = {
+const database = {
   /*
   |--------------------------------------------------------------------------
   | Default Connection
@@ -76,3 +76,9 @@ module.exports = {
     }
   }
 }
+
+if ( process.env.NODE_ENV === 'production' ) {
+  database.mysql.connection.socketPath = Env.get('DB_SOCKET');
+}
+
+module.exports = database
