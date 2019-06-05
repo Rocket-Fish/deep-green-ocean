@@ -86,3 +86,6 @@ sw.*
 
 #exe files
 *.exe
+
+#yaml files for google app engine
+*.yaml
