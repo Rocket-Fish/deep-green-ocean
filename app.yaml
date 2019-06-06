@@ -1,0 +1,32 @@
+# app.yaml
+env: flex
+runtime: nodejs
+
+instance_class: F2
+
+handlers:
+  - url: /_nuxt
+    static_dir: .nuxt/dist/client
+    secure: always
+
+  - url: /(.*\.(gif|png|jpg|ico|txt))$
+    static_files: static/\1
+    upload: static/.*\.(gif|png|jpg|ico|txt)$
+    secure: always
+
+  - url: /.*
+    script: auto
+    secure: always
+
+#env variable
+env_variables:
+  HOST: '0.0.0.0'
+  NODE_ENV: 'production'
+
+#server instance stuff
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10

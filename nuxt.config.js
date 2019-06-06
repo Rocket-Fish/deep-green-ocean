@@ -1,11 +1,7 @@
-const { resolve } = require('path')
-const pkg = require('../package')
+import pkg from './package'
 
-module.exports = {
+export default {
   mode: 'universal',
-
-  dev: process.env.NODE_ENV === 'development',
-  srcDir: resolve(__dirname, '..', 'resources'),
 
   /*
    ** Headers of the page
@@ -19,13 +15,6 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-
-  /*
-  ** API URL 
-  */
-  env: {
-      apiUrl: process.env.API_URL,
-    },
 
   /*
    ** Customize the progress-bar color

@@ -1,6 +1,6 @@
 # deepgreenocean
 
-> deep green ocean v2 powered by nuxt x adonis 
+> deep green ocean v2 
 
 ## Build Setup
 
