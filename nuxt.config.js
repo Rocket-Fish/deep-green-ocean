@@ -35,6 +35,10 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    // nuxt helmet https://github.com/victor-perez/nuxt-helmet
+    // recommend browser to keep using https
+    // google app engine doesn't register secure:always in app.yaml
+    'nuxt-helmet',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
@@ -46,7 +50,22 @@ export default {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-
+  // helmet options
+  // @see https://helmetjs.github.io/docs/
+  helmet: {
+     dnsPrefetchControl: true,
+     expectCt: true,
+//     featurePolicy: true,
+     frameguard: true,
+     hidePoweredBy: true,
+     hsts: true,
+     ieNoOpen: true,
+     noCache: true,
+     noSniff: true,
+     permittedCrossDomainPolicies: true,
+     referrerPolicy: true,
+     xssFilter: true,
+  },
   /*
    ** Build configuration
    */
