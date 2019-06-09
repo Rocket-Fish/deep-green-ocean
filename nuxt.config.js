@@ -44,12 +44,6 @@ export default {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt'
   ],
-  /*
-   ** Axios module configuration
-   */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
   // helmet options
   // @see https://helmetjs.github.io/docs/
   helmet: {
@@ -65,6 +59,16 @@ export default {
     permittedCrossDomainPolicies: true,
     referrerPolicy: true,
     xssFilter: true
+  },
+  // Axios module configuration
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+  },
+  // bootstrap vue options
+  bootstrapVue: {
+    // disable automatic inclusion to allow overriding
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false // Or `bvCSS: false`
   },
   /*
    ** Build configuration
