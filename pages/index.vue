@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style>
+/* old from the project starter template
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -42,7 +43,6 @@ export default {
   align-items: center;
   text-align: center;
 }
-
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -60,8 +60,5 @@ export default {
   word-spacing: 5px;
   padding-bottom: 15px;
 }
-
-.links {
-  padding-top: 15px;
-}
+*/
 </style>

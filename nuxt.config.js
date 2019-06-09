@@ -53,18 +53,18 @@ export default {
   // helmet options
   // @see https://helmetjs.github.io/docs/
   helmet: {
-     dnsPrefetchControl: true,
-     expectCt: true,
-//     featurePolicy: true,
-     frameguard: true,
-     hidePoweredBy: true,
-     hsts: true,
-     ieNoOpen: true,
-     noCache: true,
-     noSniff: true,
-     permittedCrossDomainPolicies: true,
-     referrerPolicy: true,
-     xssFilter: true,
+    dnsPrefetchControl: true,
+    expectCt: true,
+    //     featurePolicy: true,
+    frameguard: true,
+    hidePoweredBy: true,
+    hsts: true,
+    ieNoOpen: true,
+    noCache: true,
+    noSniff: true,
+    permittedCrossDomainPolicies: true,
+    referrerPolicy: true,
+    xssFilter: true
   },
   /*
    ** Build configuration
