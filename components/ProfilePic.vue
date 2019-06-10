@@ -18,7 +18,6 @@
 .profile_pic {
   display: inline;
   margin: 0 auto;
-  //margin-left: 1%; //centers the image
   height: 100%;
   width: 100%;
   background-color: $custom-gray;
