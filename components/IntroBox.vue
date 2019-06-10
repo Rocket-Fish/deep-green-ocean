@@ -11,9 +11,7 @@
         </div>
         <div class="font-weight-bold">
           I make some cool
-          <a href="#" class="text-decoration-none" @click="toProjects()">
-            Projects.
-          </a>
+          <nuxt-link to="/projects">Projects.</nuxt-link>
         </div>
       </b-col>
     </b-row>
@@ -25,13 +23,6 @@ import ProfilePic from '~/components/ProfilePic.vue'
 export default {
   components: {
     ProfilePic
-  },
-  methods: {
-    toProjects() {
-      this.$router.push({
-        path: '/projects'
-      })
-    }
   }
 }
 </script>
