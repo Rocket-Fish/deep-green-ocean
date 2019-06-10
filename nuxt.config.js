@@ -63,6 +63,9 @@ export default {
   // Axios module configuration
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    // enable CORS
+    proxyHeaders: false,
+    credentials: false
   },
   // bootstrap vue options
   bootstrapVue: {
