@@ -33,7 +33,7 @@ $color-complement-4: #C35800;
 $custom-gray: #d0d0d0;
 
 ////////////////////////////////////////
-// custom classes                     // 
+// custom classes                     //
 ////////////////////////////////////////
 
 .bg-white {
@@ -48,6 +48,12 @@ $custom-gray: #d0d0d0;
 .pad-1 {
   padding: 1em;
 }
+.vertical-center-content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 
 ////////////////////////////////////////
 // Bootstrap Variable overrides       //

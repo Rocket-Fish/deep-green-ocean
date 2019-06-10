@@ -26,10 +26,6 @@ export default {
   }
 }
 </script>
-<style>
-.vertical-center-content {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
+<style lang="scss" scoped>
+@import '~assets/constants.scss';
 </style>
