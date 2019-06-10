@@ -33,6 +33,23 @@ $color-complement-4: #C35800;
 $custom-gray: #d0d0d0;
 
 ////////////////////////////////////////
+// custom classes                     // 
+////////////////////////////////////////
+
+.bg-white {
+  background-color: white;
+}
+.bg-gray {
+  background-color: $custom-gray;
+}
+.center {
+  margin: 0 auto;
+}
+.pad-1 {
+  padding: 1em;
+}
+
+////////////////////////////////////////
 // Bootstrap Variable overrides       //
 ////////////////////////////////////////
 $enable-shadows: true;

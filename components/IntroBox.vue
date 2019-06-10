@@ -45,16 +45,4 @@ export default {
   display: flex;
   align-items: center;
 }
-.bg-white {
-  background-color: white;
-}
-.bg-gray {
-  background-color: $custom-gray;
-}
-.center {
-  margin: 0 auto;
-}
-.pad-1 {
-  padding: 1em;
-}
 </style>
