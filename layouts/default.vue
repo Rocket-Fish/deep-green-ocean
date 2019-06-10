@@ -8,7 +8,7 @@
 @import '~assets/custom.scss';
 
 html {
-  font-family: $font_stack;
+  font-family: $font-stack;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

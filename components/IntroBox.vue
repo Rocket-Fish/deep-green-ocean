@@ -1,9 +1,9 @@
 <template>
-  <section class=" pad_top ">
+  <section class="pad-top">
     <b-container>
       <b-row>
         <b-col sm="4"><ProfilePic /></b-col>
-        <b-col sm="8" class="white_bg">
+        <b-col sm="8" class="gray-bg">
           <div>
             some other stuffs here
           </div>
@@ -22,10 +22,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.pad_top {
+@import '~assets/constants.scss';
+
+.pad-top {
   padding-top: 10em;
 }
-.white_bg {
-  background-color: white;
+.gray-bg {
+  background-color: $custom-gray;
 }
 </style>

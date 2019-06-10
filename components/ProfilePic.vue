@@ -5,6 +5,8 @@
 </template>
 <script></script>
 <style lang="scss" scoped>
+@import '~assets/constants.scss';
+
 .image_cropper {
   width: 15rem;
   height: 15rem;
@@ -19,6 +21,6 @@
   //margin-left: 1%; //centers the image
   height: 100%;
   width: 100%;
-  background-color: #d0d0d0;
+  background-color: $custom-gray;
 }
 </style>
