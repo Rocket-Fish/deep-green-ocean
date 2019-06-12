@@ -1,7 +1,6 @@
 <template>
   <div>
-    nothing here
-    {{ getFullDescription }}
+    {{ JSON.stringify(getFullDescOfCurrentId) }}
   </div>
 </template>
 <script>
@@ -12,7 +11,10 @@ export default {
   },
   computed: {
     getFullDescription() {
-      return JSON.stringify(this.$store.state.projects.idToFullDescription)
+      return this.$store.state.projects.idToFullDescription
+    },
+    getFullDescOfCurrentId() {
+      return this.getFullDescription[this.$route.params.id]
     }
   },
   async fetch({ store, params }) {

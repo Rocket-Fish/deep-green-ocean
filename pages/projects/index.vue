@@ -18,11 +18,6 @@
           </b-row>
         </b-col>
       </b-row>
-      <b-row>
-        <b-col>
-          {{ getRawStoreData }}
-        </b-col>
-      </b-row>
     </b-container>
   </div>
 </template>
