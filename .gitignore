@@ -86,5 +86,8 @@ sw.*
 #.exe files
 *.exe
 
+#bat files
+*.bat
+
 #png files for images
 *.png
