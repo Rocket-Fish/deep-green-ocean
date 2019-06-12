@@ -2,9 +2,12 @@
   <div>
     <BorderWrapper :title="projectData.name" />
     <div class="hide-overflow">
-      <img :src="projectData.img_url" class="max-height-500" />
+      <img
+        :src="projectData.img_url"
+        class="max-height-500"
+        @click="toProject()"
+      />
     </div>
-    {{ JSON.stringify(projectData) }}
   </div>
 </template>
 <script>
@@ -19,6 +22,12 @@ export default {
       default: () => {
         return { name: 'project title' }
       }
+    }
+  },
+  methods: {
+    toProject() {
+      const currentPath = this.$route.path
+      this.$router.push(`${currentPath}/${this.projectData.id}`)
     }
   }
 }
