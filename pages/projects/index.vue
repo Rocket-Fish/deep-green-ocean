@@ -9,13 +9,11 @@
       <b-row>
         <b-col>
           <b-row v-for="{ left, right } in makeLeftRightPairs()" :key="left.id">
-            <b-col>
-              <ProjectCard :title="left.name" />
-              {{ JSON.stringify(left) }}
+            <b-col md="6">
+              <ProjectCard :project-data="left" />
             </b-col>
-            <b-col>
-              <ProjectCard :title="right.name" />
-              {{ JSON.stringify(right) }}
+            <b-col md="6">
+              <ProjectCard :project-data="right" />
             </b-col>
           </b-row>
         </b-col>

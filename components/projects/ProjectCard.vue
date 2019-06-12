@@ -1,8 +1,10 @@
 <template>
   <div>
-    <b-container class="bg-gray">
-      <BorderWrapper :title="title" />
-    </b-container>
+    <BorderWrapper :title="projectData.name" />
+    <div class="hide-overflow">
+      <img :src="projectData.img_url" class="max-height-500" />
+    </div>
+    {{ JSON.stringify(projectData) }}
   </div>
 </template>
 <script>
@@ -12,13 +14,27 @@ export default {
     BorderWrapper
   },
   props: {
-    title: {
-      type: String,
-      default: 'project title'
+    projectData: {
+      type: Object,
+      default: () => {
+        return { name: 'project title' }
+      }
     }
   }
 }
 </script>
 <style lang="scss" scoped>
 @import '~assets/constants.scss';
+
+.max-height-500 {
+  height: auto;
+  max-height: 500px;
+
+  width: auto;
+  max-width: 100%;
+}
+
+.hide-overflow {
+  overflow: hidden;
+}
 </style>
