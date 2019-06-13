@@ -3,17 +3,20 @@
     <b-container flex>
       <b-row>
         <b-col>
-          <BorderWrapper :title="title" />
+          <h1>Projects</h1>
         </b-col>
       </b-row>
       <b-row>
         <b-col>
           <b-row v-for="{ left, right } in makeLeftRightPairs()" :key="left.id">
-            <b-col md="6">
+            <b-col md="6" class="pad-1">
               <ProjectCard :project-data="left" />
             </b-col>
-            <b-col md="6">
-              <ProjectCard :project-data="right" />
+            <b-col md="6" class="pad-1">
+              <ProjectCard
+                v-if="!(typeof right === 'undefined')"
+                :project-data="right"
+              />
             </b-col>
           </b-row>
         </b-col>
@@ -22,11 +25,9 @@
   </div>
 </template>
 <script>
-import BorderWrapper from '~/components/BorderWrapper.vue'
 import ProjectCard from '~/components/projects/ProjectCard.vue'
 export default {
   components: {
-    BorderWrapper,
     ProjectCard
   },
   data() {
