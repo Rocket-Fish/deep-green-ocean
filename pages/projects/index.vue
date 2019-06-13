@@ -46,6 +46,11 @@ export default {
   async fetch({ $axios, store, params }) {
     const data = await $axios.$get(`${store.state.api.url}/projects`)
     store.commit('projects/list', data)
+
+    for (let i = 0; i < data.length; i++) {
+      const { id } = data[i]
+      await store.dispatch('projects/getFullDescriptionConditionally', id)
+    }
   },
   methods: {
     makeLeftRightPairs() {

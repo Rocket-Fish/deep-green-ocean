@@ -35,12 +35,6 @@ export default {
       return tagList
     }
   },
-  async mounted() {
-    await this.$store.dispatch(
-      'projects/getFullDescriptionConditionally',
-      this.projectData.id
-    )
-  },
   methods: {
     toProject() {
       const currentPath = this.$route.path
