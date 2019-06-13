@@ -10,14 +10,14 @@
           <h2 v-if="desc.subtitle != null">
             {{ desc.subtitle }}
           </h2>
-          {{ desc.description }}
+          <div class="bg-gray pad-1">
+            {{ desc.description }}
+          </div>
         </div>
       </div>
       <div class="margin-top-2">
         <h2>Tags</h2>
-        <div v-for="tag in getTagsList" :key="tag.id">
-          {{ tag.name }}
-        </div>
+        <TagDisplay v-for="tag in getTagsList" :key="tag.id" :tag="tag.name" />
       </div>
       <div class="margin-top-2 margin-bottom-2">
         <h2>Relevant Links</h2>
@@ -35,9 +35,11 @@
 </template>
 <script>
 import BorderWrapper from '~/components/BorderWrapper'
+import TagDisplay from '~/components/projects/TagDisplay'
 export default {
   components: {
-    BorderWrapper
+    BorderWrapper,
+    TagDisplay
   },
   validate({ params }) {
     // Must be a number
