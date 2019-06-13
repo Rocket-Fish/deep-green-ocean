@@ -42,6 +42,7 @@ export default {
   cursor: pointer;
   background-color: $color-primary-3;
 
+  transition: 0.4s;
   &:hover {
     background-color: $color-primary-2;
     transform: scale(1.1);
