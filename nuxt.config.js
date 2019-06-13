@@ -42,7 +42,9 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    // analytics
+    '@nuxtjs/google-analytics'
   ],
   // helmet options
   // @see https://helmetjs.github.io/docs/
@@ -77,6 +79,10 @@ export default {
   router: {
     middleware: 'delay'
   },
+  // analytics
+  googleAnalytics: {
+    id: 'UA-142136075-1'
+  }, 
   /*
    ** Build configuration
    */
