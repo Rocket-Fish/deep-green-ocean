@@ -2,15 +2,14 @@
   <div>
     <BorderWrapper :title="projectData.name" />
     <div class="hide-overflow">
-      <img
-        :src="projectData.img_url"
-        class="max-height-500"
+      <div
+        :style="{ backgroundImage: `url(${projectData.img_url})` }"
+        class="max-height-500 contain greyOnHover "
         @click="toProject()"
-      />
-      Tags:
-      <span v-for="{ id, name } in getTags" :key="id">
-        {{ name }}
-      </span>
+      >
+        <div class="overlay"></div>
+        <img :src="projectData.img_url" class="hidden max-height-500" />
+      </div>
     </div>
   </div>
 </template>
@@ -54,7 +53,32 @@ export default {
   max-width: 100%;
 }
 
+.contain {
+  background-size: contain;
+}
+
 .hide-overflow {
   overflow: hidden;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.greyOnHover {
+  &:hover .overlay {
+    background-color: #000;
+    opacity: 0.3;
+  }
 }
 </style>
