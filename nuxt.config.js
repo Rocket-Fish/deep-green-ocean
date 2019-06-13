@@ -73,6 +73,10 @@ export default {
     bootstrapCSS: false, // Or `css: false`
     bootstrapVueCSS: false // Or `bvCSS: false`
   },
+  // router
+  router: {
+    middleware: 'delay'
+  },
   /*
    ** Build configuration
    */

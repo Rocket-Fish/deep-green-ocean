@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <main>
     <NavLink />
     <nuxt />
-  </div>
+  </main>
 </template>
 <script>
 import NavLink from '~/components/nav/Navlink'
@@ -24,5 +24,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
 }
 </style>
