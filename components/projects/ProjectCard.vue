@@ -73,6 +73,7 @@ export default {
   position: absolute;
   transition: 0.4s;
   cursor: pointer;
+  margin: 1em;
 }
 
 .greyOnHover {
