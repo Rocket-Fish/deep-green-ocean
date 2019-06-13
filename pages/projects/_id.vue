@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container class="margin-top-2">
+    <b-container class="pad-top-2">
       <BorderWrapper :title="getName" />
       <div class="hide-overflow">
         <img :src="getImg" class="auto-width" />
@@ -78,6 +78,10 @@ export default {
 
 .margin-top-2 {
   margin-top: 2em;
+}
+
+.pad-top-2 {
+  padding-top: 2em;
 }
 .margin-bottom-2 {
   margin-bottom: 2em;

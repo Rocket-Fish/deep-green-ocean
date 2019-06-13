@@ -1,14 +1,17 @@
 <template>
   <main>
+    <BackLink />
     <NavLink />
     <nuxt />
   </main>
 </template>
 <script>
 import NavLink from '~/components/nav/Navlink'
+import BackLink from '~/components/nav/BackLink'
 export default {
   components: {
-    NavLink
+    NavLink,
+    BackLink
   }
 }
 </script>
