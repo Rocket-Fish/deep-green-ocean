@@ -7,6 +7,10 @@
         class="max-height-500"
         @click="toProject()"
       />
+      Tags:
+      <span v-for="{ id, name } in getTags" :key="id">
+        {{ name }}
+      </span>
     </div>
   </div>
 </template>
@@ -23,6 +27,19 @@ export default {
         return { name: 'project title' }
       }
     }
+  },
+  computed: {
+    getTags() {
+      const fullDescList = this.$store.state.projects.idToFullDescription
+      const tagList = fullDescList[this.projectData.id].tags
+      return tagList
+    }
+  },
+  async mounted() {
+    await this.$store.dispatch(
+      'projects/getFullDescriptionConditionally',
+      this.projectData.id
+    )
   },
   methods: {
     toProject() {
