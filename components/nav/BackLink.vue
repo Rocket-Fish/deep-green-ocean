@@ -79,11 +79,11 @@ export default {
 
 .line-1 {
   width: 26px;
-  transform: rotate(-45deg) translateX(-3px);
+  transform: rotate(-40deg) translateX(-3px);
 }
 .line-3 {
   width: 26px;
-  transform: rotate(45deg) translateX(-3px);
+  transform: rotate(40deg) translateX(-3px);
 }
 
 .fade-enter-active,
