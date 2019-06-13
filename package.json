@@ -20,7 +20,8 @@
     "bootstrap-vue": "^2.0.0-rc.11",
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
-    "nuxt-helmet": "^1.0.2"
+    "nuxt-helmet": "^1.0.2",
+    "vue-lazyload": "^1.2.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
