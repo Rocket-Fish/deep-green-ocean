@@ -1,9 +1,17 @@
 <template>
   <div>
+    <NavLink />
     <nuxt />
   </div>
 </template>
-
+<script>
+import NavLink from '~/components/nav/Navlink'
+export default {
+  components: {
+    NavLink
+  }
+}
+</script>
 <style lang="scss">
 @import '~assets/custom.scss';
 
