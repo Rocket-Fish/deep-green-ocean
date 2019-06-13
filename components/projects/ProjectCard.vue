@@ -7,7 +7,16 @@
         class="max-height-500 contain greyOnHover "
         @click="toProject()"
       >
-        <div class="overlay"></div>
+        <div class="overlay" @mouseover="mouseOver()" @mouseout="mouseOut()">
+          <div v-if="show" class="margin-2 pad-1 click-through">
+            <TagDisplay
+              v-for="tag in getTagsList"
+              :key="tag.id"
+              :tag="tag.name"
+              class="margin-1"
+            />
+          </div>
+        </div>
         <img :src="projectData.img_url" class="hidden max-height-500" />
       </div>
     </div>
@@ -15,9 +24,11 @@
 </template>
 <script>
 import BorderWrapper from '~/components/BorderWrapper'
+import TagDisplay from '~/components/projects/TagDisplay'
 export default {
   components: {
-    BorderWrapper
+    BorderWrapper,
+    TagDisplay
   },
   props: {
     projectData: {
@@ -27,8 +38,13 @@ export default {
       }
     }
   },
+  data() {
+    return {
+      show: false
+    }
+  },
   computed: {
-    getTags() {
+    getTagsList() {
       const fullDescList = this.$store.state.projects.idToFullDescription
       const tagList = fullDescList[this.projectData.id].tags
       return tagList
@@ -38,6 +54,12 @@ export default {
     toProject() {
       const currentPath = this.$route.path
       this.$router.push(`${currentPath}/${this.projectData.id}`)
+    },
+    mouseOver() {
+      this.show = true
+    },
+    mouseOut() {
+      this.show = false
     }
   }
 }
@@ -65,6 +87,10 @@ export default {
   visibility: hidden;
 }
 
+.click-through {
+  pointer-events: none;
+}
+
 .overlay {
   top: 0;
   bottom: 0;
@@ -78,8 +104,8 @@ export default {
 
 .greyOnHover {
   &:hover .overlay {
-    background-color: #000;
-    opacity: 0.3;
+    background-color: rgb(0, 0, 0); // for bad browsers
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 </style>
